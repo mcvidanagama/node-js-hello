@@ -28,5 +28,8 @@ RUN     npm install
 ENV    PORT 8080
 EXPOSE 8080
 
+RUN useradd -ms /bin/bash newuser
+USER newuser
+
 CMD        ["index.js"]
 ENTRYPOINT ["node"]
